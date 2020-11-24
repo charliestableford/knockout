@@ -5,4 +5,5 @@ $(function() {
         course: 'knockout', 
         rating: 10
     }
+    ko.applyBindings(myViewModel);
 });
