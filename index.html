@@ -11,10 +11,18 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <p>Course: <input data-bind = "value: course"/></p>
+    <form >
+        New Course: 
+        <button type="submit" > Add</button>
+        <p>Course list: </p>
+        <select mulitple="mulitple" width="50" ></select>
+    </form>
+    <h3> There are <span></span> courses in the list</h3>
+
+    <!-- <p>Course: <input data-bind = "value: course"/></p>
     <p>Rating: <input data-bind = "value: rating"/></p>
-    <!--with span you are working with text not values-->
-    <h3><span data-bind="text: courseResult"></span></h3>
+    with span you are working with text not values
+    <h3><span data-bind="text: courseResult"></span></h3> -->
 
 <script src="script.js"></script>
 </body>
