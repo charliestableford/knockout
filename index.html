@@ -11,9 +11,10 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <p>Course: <input /></p>
-    <p>Rating: <input /></p>
-    <h3><span></span></h3>
+    <p>Course: <input data-bind = "value: course"/></p>
+    <p>Rating: <input data-bind = "value: rating"/></p>
+    <!--with span you are working with text not value-->
+    <h3><span data-bind="text: courseResult"></span></h3>
 
 <script src="script.js"></script>
 </body>
