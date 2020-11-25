@@ -8,6 +8,7 @@ $(function() {
        // this new funciton has its own this. it is referencing the funciton it is in not the one above. 
        this.courseResult = ko.computed(function(){
             return "The course" + this.course() + "got a rating of" + this.rating();
-       }, )
+       }, this);
    }
+   ko.applyBindings(new myViewModel("Knockout Js", 9));
 });
