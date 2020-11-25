@@ -13,22 +13,41 @@ console.log("in");
 //    ko.applyBindings(new myViewModel("Knockout Js", 9));
 // });
 
+// $(function(){
+//     var listModel = function(courses){
+//         var self = this;
+//         // this is how you declare an observable array
+//         //observable array with courses passed in.
+//         self.courses = ko.observableArray(courses);
+//         self.newCourse = ko.observable("");
+//         self.addCourse = function(){
+//             //take the value that the person writes and push it into the array
+//             if(self.newCourse() !="") {
+//                 self.courses.push(self.newCourse());
+//                 self.newCourse("");
+//             }
+//             // user is clicking
+//             // you have to pass this when you have a new function 
+//         }
+//     }
+//     ko.applyBindings(new listModel(["C#","HTML5", "Visual Basic"]));
+// })
+
 $(function(){
-    var listModel = function(courses){
-        var self = this;
-        // this is how you declare an observable array
-        //observable array with courses passed in.
-        self.courses = ko.observableArray(courses);
-        self.newCourse = ko.observable("");
-        self.addCourse = function(){
-            //take the value that the person writes and push it into the array
-            if(self.newCourse() !="") {
-                self.courses.push(self.newCourse());
-                self.newCourse("");
-            }
-            // user is clicking
-            // you have to pass this when you have a new function 
-        }
+    var myViewModel = function(price, quantity){
+        this.itemPrice = ko.observable(price);
+        this.quantity = ko.observable(quantity);
+        this.totalPrice = ko.computed({
+            read: function(){
+                return "$" + (this.itemPrice() * this.quantity()).toFixed(2);
+            }, 
+            write: function(value){
+
+            }, 
+            //this is the owner of the viewModel
+            owner: this
+        })
     }
-    ko.applyBindings(new listModel(["C#","HTML5", "Visual Basic"]));
-})
+
+    ko.applyBindings(new myViewModel(15.00, 9));
+});
