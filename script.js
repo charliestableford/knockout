@@ -42,6 +42,12 @@ $(function(){
                 return "$" + (this.itemPrice() * this.quantity()).toFixed(2);
             }, 
             write: function(value){
+                value = parseFloat(value.replace(/[^\.\d]/g,""));
+                //if the value after pasring is not a num make it zero otherwise make it zero.
+                value = isNaN(value) ? 0 : value;
+                // () used because it is like a funciton call
+                var tempPrice = value/ this.quantity();
+                this.itemPrice(tempPrice);
 
             }, 
             //this is the owner of the viewModel
