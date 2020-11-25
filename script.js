@@ -33,27 +33,34 @@ console.log("in");
 //     ko.applyBindings(new listModel(["C#","HTML5", "Visual Basic"]));
 // })
 
-$(function(){
-    var myViewModel = function(price, quantity){
-        this.itemPrice = ko.observable(price);
-        this.quantity = ko.observable(quantity);
-        this.totalPrice = ko.computed({
-            read: function(){
-                return "$" + (this.itemPrice() * this.quantity()).toFixed(2);
-            }, 
-            write: function(value){
-                value = parseFloat(value.replace(/[^\.\d]/g,""));
-                //if the value after pasring is not a num make it zero otherwise make it zero.
-                value = isNaN(value) ? 0 : value;
-                // () used because it is like a funciton call
-                var tempPrice = value/ this.quantity();
-                this.itemPrice(tempPrice);
+// $(function(){
+//     var myViewModel = function(price, quantity){
+//         this.itemPrice = ko.observable(price);
+//         this.quantity = ko.observable(quantity);
+//         this.totalPrice = ko.computed({
+//             read: function(){
+//                 return "$" + (this.itemPrice() * this.quantity()).toFixed(2);
+//             }, 
+//             write: function(value){
+//                 value = parseFloat(value.replace(/[^\.\d]/g,""));
+//                 //if the value after pasring is not a num make it zero otherwise make it zero.
+//                 value = isNaN(value) ? 0 : value;
+//                 // () used because it is like a funciton call
+//                 var tempPrice = value/ this.quantity();
+//                 this.itemPrice(tempPrice);
 
-            }, 
-            //this is the owner of the viewModel
-            owner: this
-        })
+//             }, 
+//             //this is the owner of the viewModel
+//             owner: this
+//         })
+//     }
+
+//     ko.applyBindings(new myViewModel(15.00, 9));
+// });
+
+$ (function(){
+    var myViewModel = function(){
+        this.showMessage = ko.observable(false);
     }
-
-    ko.applyBindings(new myViewModel(15.00, 9));
-});
+    ko.applyBindings(new myViewModel());
+})

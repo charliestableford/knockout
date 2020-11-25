@@ -11,9 +11,13 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <p>Price per item: <input data-bind="value: itemPrice"/></p>
+    <input type="checkbox" data-bind = "checked: showMessage"/>
+    <h3 data-bind="visible: showMessage">Interesting feature in knockout</h3>
+
+
+    <!-- <p>Price per item: <input data-bind="value: itemPrice"/></p>
     <p> Quantity: <input data-bind="value: quantity" /></p>
-    <p>Total price: <input data-bind="value: totalPrice"/></p>
+    <p>Total price: <input data-bind="value: totalPrice"/></p> -->
     <!-- <form data-bind="submit: addCourse">
         New Course: 
         <input data-bind="value: newCourse, valueUpdate: 'afterkeydown'" />
