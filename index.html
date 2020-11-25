@@ -11,13 +11,14 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <form >
+    <form data-bind="submit: addCourse">
         New Course: 
-        <button type="submit" > Add</button>
-        <p>Course list: </p>
-        <select mulitple="mulitple" width="50" ></select>
+        <input data-bind="value: newCourse, valueUpdate: 'afterkeydown'" />
+        <button type="submit" data-bind="enable: newCourse().length> 0" > Add</button>
+        <p >Course list: </p>
+        <select mulitple="mulitple" width="50" data-bind="options: courses"></select>
     </form>
-    <h3> There are <span></span> courses in the list</h3>
+    <h3> There are <span data-bind="text: courses().length"></span> courses in the list</h3>
 
     <!-- <p>Course: <input data-bind = "value: course"/></p>
     <p>Rating: <input data-bind = "value: rating"/></p>
