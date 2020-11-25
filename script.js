@@ -1,7 +1,8 @@
 console.log("in");
 
 $(function() {
-   var myviewModel = function(myCourse, myRating){
-       
+   var myViewModel = function(myCourse, myRating){
+       this.course = ko.observable(myCourse);
+       this.rating = ko.observable(myRating);
    }
 });
