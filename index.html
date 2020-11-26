@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knockout</title>
+    <link rel="stylesheet" href="site.css">
     <script src="../knockout-3.5.1.js"></script>
     <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -11,8 +12,11 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <input type="checkbox" data-bind = "checked: showMessage"/>
-    <h3 data-bind="visible: showMessage">Interesting feature in knockout</h3>
+    Welcome <i ><span data-bind = "text: participant"></span></i> to the knockout course!!
+    Welcome <i ><span data-bind = "html: participant"></span></i> to the knockout course!!
+
+    <!-- <input type="checkbox" data-bind = "checked: showMessage"/>
+    <h3 data-bind="visible: showMessage">Interesting feature in knockout</h3> -->
 
 
     <!-- <p>Price per item: <input data-bind="value: itemPrice"/></p>

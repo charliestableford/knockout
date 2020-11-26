@@ -58,9 +58,25 @@ console.log("in");
 //     ko.applyBindings(new myViewModel(15.00, 9));
 // });
 
-$ (function(){
-    var myViewModel = function(){
-        this.showMessage = ko.observable(false);
+// $ (function(){
+//     var myViewModel = function(){
+//         this.showMessage = ko.observable(false);
+//     }
+//     ko.applyBindings(new myViewModel());
+// })
+
+// $(function(){
+//     var myViewModel = {
+//         participant: ko.observable()    
+//     };
+//     myViewModel.participant("everyone");
+//     ko.applyBindings(myViewModel);
+// })
+
+$(function() {
+    var myViewModel = {
+        participant: ko.observable()
     }
-    ko.applyBindings(new myViewModel());
+    myViewModel.participant("<u><b>everyone</b></u>");
+    ko.applyBindings(myViewModel);
 })
