@@ -85,5 +85,5 @@ $(function(){
     var myViewModel = function(){
         this.grade = ko.observable(100);
     }
-    ko.applyBindings(new myViewModel);
+    ko.applyBindings(new myViewModel());
 })
