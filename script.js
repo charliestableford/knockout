@@ -83,7 +83,7 @@ console.log("in");
 
 $(function(){
     var myViewModel = function(){
-        this.grade = ko.observable(100);
+        this.grade = ko.observable(69);
     }
     ko.applyBindings(new myViewModel());
 })
