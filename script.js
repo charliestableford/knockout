@@ -81,9 +81,19 @@ console.log("in");
 //     ko.applyBindings(myViewModel);
 // })
 
+// $(function(){
+//     var myViewModel = function(){
+//         this.grade = ko.observable(69);
+//     }
+//     ko.applyBindings(new myViewModel());
+// })
+
 $(function(){
-    var myViewModel = function(){
-        this.grade = ko.observable(69);
-    }
-    ko.applyBindings(new myViewModel());
+    $(function(){
+        var myViewModel = function(){
+            this.grade = ko.observable(100)
+            this.isComplex = ko.observable(false)
+        }
+        ko.applyBindings(new myViewModel());
+    })
 })
