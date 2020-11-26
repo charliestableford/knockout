@@ -73,10 +73,17 @@ console.log("in");
 //     ko.applyBindings(myViewModel);
 // })
 
-$(function() {
-    var myViewModel = {
-        participant: ko.observable()
+// $(function() {
+//     var myViewModel = {
+//         participant: ko.observable()
+//     }
+//     myViewModel.participant("<u><b>everyone</b></u>");
+//     ko.applyBindings(myViewModel);
+// })
+
+$(function(){
+    var myViewModel = function(){
+        this.grade = ko.observable(100);
     }
-    myViewModel.participant("<u><b>everyone</b></u>");
-    ko.applyBindings(myViewModel);
+    ko.applyBindings(new myViewModel);
 })
