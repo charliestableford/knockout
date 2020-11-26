@@ -91,7 +91,7 @@ console.log("in");
 $(function(){
     $(function(){
         var myViewModel = function(){
-            this.grade = ko.observable(100)
+            this.grade = ko.observable(69)
             this.isComplex = ko.observable(false)
         }
         ko.applyBindings(new myViewModel());
