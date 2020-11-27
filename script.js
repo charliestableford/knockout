@@ -146,4 +146,11 @@ $(function(){
         new student('Lee', 'Baba', 'A'), 
         new student('Julia', 'Hoopy', 'A'), 
     ]
+    var myViewModel = new function(){
+        var self = this;
+        self.students = ko.observableArray(students);
+        self.addStudent = function(){
+            self.students.push(new student('Place', 'Holder', 'A'));
+        }
+    }
 })
