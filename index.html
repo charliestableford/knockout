@@ -14,19 +14,19 @@
 <body>
 
 <section>
-    <ul>
+    <ul data-bind="foreach: publishers">
         <li>
-            <span></span>
-            <ul>
+            <span data-bind="text: $data.name"></span>
+            <ul data-bind="foreach: books">
                 <li>
-                    <span></span>
-                    <ul>
+                    <span data-bind="text: $data.title"></span>
+                    <ul data-bind="foreach: authors">
                         <li>
                             <div>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                                <span data-bind="text: firstName"></span>
+                                <span data-bind="text: lastName"></span>
+                                <span data-bind="text: $parents[1].name"></span>
+                                <span data-bind="text: $index"></span>
                             </div>
                         </li>
                     </ul>
