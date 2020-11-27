@@ -104,4 +104,4 @@ $(function(){
         this.info = ko.observable("Nice cat!")
     }
     ko.applyBindings(new myViewModel());
-})
+}) zoodle baby
