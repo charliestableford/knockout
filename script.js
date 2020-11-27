@@ -98,10 +98,14 @@ console.log("in");
 //     })
 // })
 
+// $(function(){
+//     var myViewModel = function(){
+//         this.source = ko.observable("imgs/cat.png"),
+//         this.info = ko.observable("Nice cat!")
+//     }
+//     ko.applyBindings(new myViewModel());
+// }) 
+
 $(function(){
-    var myViewModel = function(){
-        this.source = ko.observable("imgs/cat.png"),
-        this.info = ko.observable("Nice cat!")
-    }
-    ko.applyBindings(new myViewModel());
-}) 
+    
+})
