@@ -114,7 +114,7 @@ console.log("in");
 // })
 
 $(function(){
-    ko.applyBidnings({
+    ko.applyBindings({
         name: "James",
         course: {
             name: "Intro to programming", 

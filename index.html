@@ -16,7 +16,7 @@
     
 </div>
     <h1 data-bind="text: name"></h1>
-    <p>Course: <span data-bind="text: course.name"></span>
+    <p data-bind="with: course">Course: <span data-bind="text: name"></span><br>
         Grade: <span data-bind="text: grade"></span>
     </p>
 
