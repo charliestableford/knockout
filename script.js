@@ -155,3 +155,34 @@ console.log("in");
 //     }
 //     ko.applyBindings(myViewModel);
 // })
+
+
+$(function(){
+    ko.applyBindings({
+        publishers: [
+            {
+                name: "APress",
+                books: [{
+                    title: "Pro HTML 5", 
+                    authors: [{firstName: "James", lastName: "Wood"}]
+                },
+                {
+                        title: "Pro C#", 
+                        authors: [{firstName: "Lisa", lastName: "Yanks"}]
+                    }]
+            },
+            {
+                name: "Wiley",
+                books: [{
+                    title: "Javascript", 
+                    authors: [{firstName: "Tim", lastName: "Allem"}]
+                },
+                {
+                        title: "Knockout JS", 
+                        authors: [{firstName: "Billy", lastName: "Bob"}]
+                    }]
+            },
+
+        ]
+    })
+})
