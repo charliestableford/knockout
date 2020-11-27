@@ -15,9 +15,9 @@
 <div>
     
 </div>
-    <input type="checkbox"/>
-    <h3>interesting feature in knockout</h3>
-    <h3>Not as interesting feature in knockout</h3>
+    <input type="checkbox" data-bind = "checked: showMessage"/>
+    <h3 data-bind="if: showMessage">interesting feature in knockout</h3>
+    <h3 data-bind="ifnot: showMessage">Not as interesting feature in knockout</h3>
 
     <!-- <div><img data-bind="attr:{src: source, title: info}"></div> -->
 
