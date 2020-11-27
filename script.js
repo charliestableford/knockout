@@ -153,4 +153,5 @@ $(function(){
             self.students.push(new student('Place', 'Holder', 'A'));
         }
     }
+    ko.applyBindings(myViewModel());
 })
