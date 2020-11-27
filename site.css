@@ -2,3 +2,10 @@
     background-color: yellow;
     color: red;
 }
+
+#definition{
+    width: 300px;
+    height: 180px;
+    background: gray;
+    color: black;
+}
