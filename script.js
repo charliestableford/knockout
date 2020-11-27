@@ -110,4 +110,5 @@ $(function(){
     var myViewModel = function(){
         this.showMessage = ko.observable(false)
     }
+    ko.applyBindings(new myViewModel());
 })
