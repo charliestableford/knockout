@@ -107,5 +107,7 @@ console.log("in");
 // }) 
 
 $(function(){
-    
+    var myViewModel = function(){
+        
+    }
 })
