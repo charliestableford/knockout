@@ -123,13 +123,27 @@ console.log("in");
 //     })
 // })
 
-$(function(){
-    ko.applyBindings({
-        students: [
-            {firstName: "Kelly", lastName: "Jack", grade: "A"}, 
-            {firstName: "Tim", lastName: "Zoodle", grade: "A"}, 
-            {firstName: "Linda", lastName: "BabyBoy", grade: "A"}
+// $(function(){
+//     ko.applyBindings({
+//         students: [
+//             {firstName: "Kelly", lastName: "Jack", grade: "A"}, 
+//             {firstName: "Tim", lastName: "Zoodle", grade: "A"}, 
+//             {firstName: "Linda", lastName: "BabyBoy", grade: "A"}
 
-        ]
-    });
-});
+//         ]
+//     });
+// });
+
+$(function(){
+    var student = function(first, last, grade){
+        this.firstName = first;
+        this.lastName = last;
+        this.grade = grade;
+    }
+    var students = [
+        new student('Jill', 'Sexton', 'A'), 
+        new student('Zac', 'ZoodleHuman', 'A'), 
+        new student('Lee', 'Baba', 'A'), 
+        new student('Julia', 'Hoopy', 'A'), 
+    ]
+})
