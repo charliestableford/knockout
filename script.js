@@ -108,6 +108,6 @@ console.log("in");
 
 $(function(){
     var myViewModel = function(){
-        
+        this.showMessage = ko.observable(false)
     }
 })
