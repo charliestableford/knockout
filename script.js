@@ -126,10 +126,10 @@ console.log("in");
 $(function(){
     ko.applyBindings({
         students: [
-            {fristName: "Kelly", lastName: "Jack", grade: "A"}, 
-            {fristName: "Tim", lastName: "Zoodle", grade: "A"}, 
-            {fristName: "Linda", lastName: "BabyBoy", grade: "A"}
+            {firstName: "Kelly", lastName: "Jack", grade: "A"}, 
+            {firstName: "Tim", lastName: "Zoodle", grade: "A"}, 
+            {firstName: "Linda", lastName: "BabyBoy", grade: "A"}
 
         ]
-    })
-})
+    });
+});
