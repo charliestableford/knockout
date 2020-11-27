@@ -106,9 +106,19 @@ console.log("in");
 //     ko.applyBindings(new myViewModel());
 // }) 
 
+// $(function(){
+//     var myViewModel = function(){
+//         this.showMessage = ko.observable(false)
+//     }
+//     ko.applyBindings(new myViewModel());
+// })
+
 $(function(){
-    var myViewModel = function(){
-        this.showMessage = ko.observable(false)
-    }
-    ko.applyBindings(new myViewModel());
+    ko.applyBidnings({
+        name: "James",
+        course: {
+            name: "Intro to programming", 
+            grade: 89
+        }
+    })
 })
