@@ -13,7 +13,30 @@
 </head>
 <body>
 
-<div>
+<section>
+    <ul>
+        <li>
+            <span></span>
+            <ul>
+                <li>
+                    <span></span>
+                    <ul>
+                        <li>
+                            <div>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<!-- <div>
     <table>
         <thead>
             <tr>
@@ -31,18 +54,18 @@
         </tbody>
     </table>
     <div>
-
+        <button data-bind = "click: addStudent">Add Student</button>
     </div>
     <hr />
-    <ul>
-        <li>The first name is: <b></b> at location</li>
+    <ul data-bind="foreach: students">
+        <li>The first name is: <b data-bind="text: $data.firstName"></b> at location <u data-bind="text: $index"></u></li>
     </ul>
     <div id="debug" style="clear:both">
     <hr />
     <h3>Debug</h3>
     <div data-bind="text: ko.toJSON($data)"></div>
 </div>
-</div>
+</div> -->
     <!-- <h1 data-bind="text: name"></h1>
     <p data-bind="with: course">Course: <span data-bind="text: name"></span><br>
         Grade: <span data-bind="text: grade"></span>

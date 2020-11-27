@@ -134,24 +134,24 @@ console.log("in");
 //     });
 // });
 
-$(function(){
-    var student = function(first, last, grade){
-        this.firstName = first;
-        this.lastName = last;
-        this.grade = grade;
-    }
-    var students = [
-        new student('Jill', 'Sexton', 'A'), 
-        new student('Zac', 'ZoodleHuman', 'A'), 
-        new student('Lee', 'Baba', 'A'), 
-        new student('Julia', 'Hoopy', 'A'), 
-    ]
-    var myViewModel = new function(){
-        var self = this;
-        self.students = ko.observableArray(students);
-        self.addStudent = function(){
-            self.students.push(new student('Place', 'Holder', 'A'));
-        }
-    }
-    ko.applyBindings(myViewModel());
-})
+// $(function(){
+//     var student = function(first, last, grade){
+//         this.firstName = first;
+//         this.lastName = last;
+//         this.grade = grade;
+//     }
+//     var students = [
+//         new student('Jill', 'Sexton', 'A'), 
+//         new student('Zac', 'ZoodleHuman', 'A'), 
+//         new student('Lee', 'Baba', 'A'), 
+//         new student('Julia', 'Hoopy', 'A'), 
+//     ]
+//     var myViewModel = new function(){
+//         var self = this;
+//         self.students = ko.observableArray(students);
+//         self.addStudent = function(){
+//             self.students.push(new student('Place', 'Holder', 'A'));
+//         }
+//     }
+//     ko.applyBindings(myViewModel);
+// })
