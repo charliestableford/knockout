@@ -113,12 +113,23 @@ console.log("in");
 //     ko.applyBindings(new myViewModel());
 // })
 
+// $(function(){
+//     ko.applyBindings({
+//         name: "James",
+//         course: {
+//             name: "Intro to programming", 
+//             grade: 89
+//         }
+//     })
+// })
+
 $(function(){
     ko.applyBindings({
-        name: "James",
-        course: {
-            name: "Intro to programming", 
-            grade: 89
-        }
+        students: [
+            {fristName: "Kelly", lastName: "Jack", grade: "A"}, 
+            {fristName: "Tim", lastName: "Zoodle", grade: "A"}, 
+            {fristName: "Linda", lastName: "BabyBoy", grade: "A"}
+
+        ]
     })
 })
