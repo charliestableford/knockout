@@ -12,8 +12,14 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="main" data-bind="visible: counter() < 10">
+        <span data-bind="text: counter"></span>
+    </div>
+    <div>
+        <button>Increment</button>
+    </div>
 
-<section>
+<!-- <section>
     <ul data-bind="foreach: publishers">
         <li>
             <span data-bind="text: $data.name"></span>
@@ -34,7 +40,7 @@
             </ul>
         </li>
     </ul>
-</section>
+</section> -->
 
 <!-- <div>
     <table>
