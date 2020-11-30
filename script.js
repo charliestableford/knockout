@@ -220,15 +220,19 @@ console.log("in");
 //     ko.applyBindings(viewModel);
 // })
 
-$(function (){
-    function libViewModel(lib){
-        this.library = ko.observable(lib),
-        this.editing=  ko.observable(false),
-        this.edit = function(){
-            // when the funciton is triggered we will allow editing
-            this.editing(true);
-        }
+// $(function (){
+//     function libViewModel(lib){
+//         this.library = ko.observable(lib),
+//         this.editing=  ko.observable(false),
+//         this.edit = function(){
+//             // when the funciton is triggered we will allow editing
+//             this.editing(true);
+//         }
 
-    }
-    ko.applyBindings(libViewModel("jQuery"));
-});
+//     }
+//     ko.applyBindings(libViewModel("jQuery"));
+// });
+
+$(function(){
+    
+})
