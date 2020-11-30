@@ -211,11 +211,18 @@ console.log("in");
 //     ko.applyBindings(myViewModel);
 // })
 
-$(function(){
-    var viewModel = {
-        // two properties - accepted conditions 
-        acceptedConditions: ko.observable(false),
-        firstName: ko.observable("anonymous")
+// $(function(){
+//     var viewModel = {
+//         // two properties - accepted conditions 
+//         acceptedConditions: ko.observable(false),
+//         firstName: ko.observable("")
+//     }
+//     ko.applyBindings(viewModel);
+// })
+
+$(function (){
+    function libViewModel(lib){
+
     }
-    ko.applyBindings(viewModel);
-})
+    ko.applyBindings(libViewModel("jQuery"));
+});
