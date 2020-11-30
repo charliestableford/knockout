@@ -12,14 +12,62 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <p>Do you like JavaScript? <input type="checkbox" data-bind="checked: likeJS" /></p> 
+    <div id="courses">
+        <h3>Course Registration</h3>
+        <ul>
+            <li>
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" 
+                placeholder="First name" />
+            </li>
+            <li>
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" 
+                placeholder="Last name"/>
+            </li>
+            <li>
+                <label for="courseList">Course</label>
+                <select id="courseList" 
+                    data-bind="options: availableCourses, value: selectedCourse, optionsCaption: 'Select a course...'"></select>
+            </li>
+            <li>
+                <span data-bind="visible: selectedCourse"><em data-bind="text: selectedCourse"></em> is an interesting course to take!</span>
+            </li>
+            <li>
+                <label for="credithours">Credit Hours</label>
+                <input id="credithours" name="credithours" 
+                type="number" min="1" max="6" 
+                value="3" />
+            </li>
+            <li>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="Email" 
+                placeholder="myname@college.edu" />
+            </li>
+            <li>
+                <label for="tel">Phone</label>
+                <input type="tel" id="tel" name="tel" pattern="\d{10}" 
+                placeholder="1234567890" />
+            </li>
+            <li>
+                <input type="checkbox" name="Accept"/> 
+                I accepts the terms and condition
+            </li>
+
+            <li>
+                <button type="submit">Submit</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- <p>Do you like JavaScript? <input type="checkbox" data-bind="checked: likeJS" /></p> 
     <div data-bind="visible: likeJS">
         Which JavaScript library have you used in the past?
         <div><input type="checkbox" value="Knockout_JS" data-bind="checked: JSLibraries"/> Knockout JS</div>
         <div><input type="checkbox" value="jQuery_UI" data-bind="checked: JSLibraries"/> jQuery UI</div>
         <div><input type="checkbox" value="jQuery" data-bind="checked: JSLibraries"/> jQuery</div>
     </div>
-    <p>The length of the array is: <b data-bind="text: JSLibraries().length"></b> </p>
+    <p>The length of the array is: <b data-bind="text: JSLibraries().length"></b> </p> -->
     <!-- <p>
         Preferred Javascript Library: 
         <b data-bind="visible: !editing(), text: library, click: edit"> $nbsp;</b>

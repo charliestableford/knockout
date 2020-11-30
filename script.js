@@ -233,10 +233,18 @@ console.log("in");
 //     ko.applyBindings(libViewModel("jQuery"));
 // });
 
+// $(function(){
+//     var viewModel = {
+//         likeJS: ko.observable(false), 
+//         JSLibraries: ko.observableArray(["Knockout_JS", "jQuery", "jQuery_UI"])
+//     }
+//     ko.applyBindings(viewModel);
+// })
+
 $(function(){
-    var viewModel = {
-        likeJS: ko.observable(false), 
-        JSLibraries: ko.observableArray(["Knockout_JS", "jQuery", "jQuery_UI"])
+    var viewModel= {
+        availableCourses = ko.observableArray(["C#", "JQuery", "Knockout JS", "Jquery UI"]),
+        selectedCourse = ko.observable()
     }
     ko.applyBindings(viewModel);
 })
