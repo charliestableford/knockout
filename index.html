@@ -13,9 +13,9 @@
 </head>
 <body>
     <p>
-        Preferred JAvascript Library: 
-        <b> $nbsp;</b>
-        <input />
+        Preferred Javascript Library: 
+        <b data-bind="visible: !editing(), text: library, click: edit"> $nbsp;</b>
+        <input data-bind="visibile:editing, value: library"/>
     </p>
     <!-- <div id="courses">
             <h3>Course Registration</h3>
