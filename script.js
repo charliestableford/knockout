@@ -243,8 +243,8 @@ console.log("in");
 
 $(function(){
     var viewModel= {
-        availableCourses = ko.observableArray(["C#", "JQuery", "Knockout JS", "Jquery UI"]),
-        selectedCourse = ko.observable()
+        availableCourses: ko.observableArray(["C#", "JQuery", "Knockout JS", "Jquery UI"]),
+        selectedCourse: ko.observable()
     }
     ko.applyBindings(viewModel);
 })
