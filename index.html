@@ -14,10 +14,12 @@
 <body>
 <h2> Publishers</h2>
 <label><input type="checkbox" data-bind="checked: showBookDetail" />Show book details</label>
+<div data-bind="slideVisible: showBookDetail, duration: 500" class='book' >
 <h3 data-bind="text:name"></h3>
 <p>Book: <span data-bind="text:book"></span></p>
 <p>PRice: <span data-bind="text:price"></span></p>
 <hr />
+</div>
     <!-- <div id="courses" style="float: left">
         <h3>Course Registration</h3>
         <ul>
