@@ -234,5 +234,9 @@ console.log("in");
 // });
 
 $(function(){
-    
+    var viewModel = {
+        likeJS: ko.observable(false), 
+        JSLibraries: ko.observableArray(["Knockout_JS", "jQuery", "jQuery_UI"])
+    }
+    ko.applyBindings(viewModel);
 })
