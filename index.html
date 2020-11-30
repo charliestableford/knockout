@@ -12,7 +12,69 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="courses">
+<h2> Publishers</h2>
+<label><input type="checkbox" data-bind="checked: showBookDetail" />Show book details</label>
+<h3 data-bind="text:name"></h3>
+<p>Book: <span data-bind="text:book"></span></p>
+<p>PRice: <span data-bind="text:price"></span></p>
+<hr />
+    <!-- <div id="courses" style="float: left">
+        <h3>Course Registration</h3>
+        <ul>
+            <li>
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" 
+                placeholder="First name" />
+            </li>
+            <li>
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" 
+                placeholder="Last name"/>
+            </li>
+            <li>
+                <label for="courseList">Course(s)</label>
+                <select id="courseList" 
+                    data-bind="options: availableCourses, selectedOptions: chosenCourses"
+                    size="3" multiple="true"></select>
+            </li>
+            <li>
+                <label for="credithours">Credit Hours</label>
+                <input id="credithours" name="credithours" 
+                type="number" min="1" max="6" 
+                value="3" />
+            </li>
+            <li>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="Email" 
+                placeholder="myname@college.edu" />
+            </li>
+            <li>
+                <label for="tel">Phone</label>
+                <input type="tel" id="tel" name="tel" pattern="\d{10}" 
+                placeholder="1234567890" />
+            </li>
+            <li>
+                <input type="checkbox" name="Accept"/> 
+                I accepts the terms and condition
+            </li>
+
+            <li>
+                <button type="submit">Submit</button>
+            </li>
+        </ul>
+    </div>
+<div style="float:right" id="result">
+    <ol data-bind="foreach: chosenCourses">
+        <li><span data-bind="text: $data"></span></li>
+    </ol>
+</div>
+<div id="debug" style="clear:both">
+<hr />
+<h3>Debug</h3>
+<div data-bind="text: ko.toJSON(chosenCourses)"></div>
+</div> -->
+
+    <!-- <div id="courses">
         <h3>Course Registration</h3>
         <ul>
             <li>
@@ -58,7 +120,7 @@
                 <button type="submit">Submit</button>
             </li>
         </ul>
-    </div>
+    </div> -->
 
     <!-- <p>Do you like JavaScript? <input type="checkbox" data-bind="checked: likeJS" /></p> 
     <div data-bind="visible: likeJS">

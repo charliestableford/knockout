@@ -241,10 +241,60 @@ console.log("in");
 //     ko.applyBindings(viewModel);
 // })
 
-$(function(){
-    var viewModel= {
-        availableCourses: ko.observableArray(["C#", "JQuery", "Knockout JS", "Jquery UI"]),
-        selectedCourse: ko.observable()
+// $(function(){
+//     var viewModel= {
+//         availableCourses: ko.observableArray(["C#", "JQuery", "Knockout JS", "Jquery UI"]),
+//         selectedCourse: ko.observable()
+//     }
+//     ko.applyBindings(viewModel);
+// })
+
+// $(function(){
+//     var viewModel = {
+//         availableCourses: ko.observableArray(['C#', 'jQuery', 'Knockout JS', 'jQuery UI', 'Visual Basic.NET', 'Java', 'JavaScript']),
+//     chosenCourses: ko.observableArray()
+//     }
+//     ko.applyBindings(viewModel);
+// });
+
+$(function () {
+
+    ko.bindingHandlers.slideVisible = {
+        init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+            // This will be called when the binding is first applied to an element
+            // Set up any initial state, event handlers, etc. here
+            var value = ko.unwrap(valueAccessor()); // Get the current value of the current property we're bound to
+            $(element).toggle(value); // jQuery will hide/show the element depending on whether "value" is true or false
+        },
+        update: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+            // This will be called once when the binding is first applied to an element,
+            // and again whenever the associated observable changes value.
+            // Update the DOM element based on the supplied values here.
+
+            // First get the latest data that we're bound to
+            var value = valueAccessor(),
+                allBindings = allBindingsAccessor();
+
+            // Next, whether or not the supplied model property is observable, get its current value
+            var valueUnwrapped = ko.unwrap(value);
+
+            // Grab some more data from another binding property
+            var duration = allBindings.duration || 400; // 400ms is default duration unless otherwise specified
+
+            // Now manipulate the DOM element
+            if (valueUnwrapped == true)
+                $(element).slideDown(duration); // Make the element visible
+            else
+                $(element).slideUp(duration);   // Make the element invisible
+        }
+    };
+
+    var BookViewModel = {
+        name: 'APress',
+        book: 'Pro JavaScript',
+        price: 49.99,
+        showBookDetail: ko.observable(false)
     }
-    ko.applyBindings(viewModel);
-})
+    
+    ko.applyBindings(BookViewModel);
+});
