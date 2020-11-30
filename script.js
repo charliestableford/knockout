@@ -212,5 +212,10 @@ console.log("in");
 // })
 
 $(function(){
-    
+    var viewModel = {
+        // two properties - accepted conditions 
+        acceptedConditions: ko.observable(false),
+        firstName: ko.observable("anonymous")
+    }
+    ko.applyBindings(viewModel);
 })
