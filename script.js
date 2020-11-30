@@ -198,15 +198,19 @@ console.log("in");
 //     ko.applyBindings(viewModel);
 // })
 
+// $(function(){
+//     var myViewModel = {
+//         definitionEnabled: ko.observable(false),
+//         showDefinition: function(){
+//             this.definitionEnabled(true)
+//         },
+//         hideDefinition: function(){
+//             this.definitionEnabled(false)
+//         }
+//     }
+//     ko.applyBindings(myViewModel);
+// })
+
 $(function(){
-    var myViewModel = {
-        definitionEnabled: ko.observable(false),
-        showDefinition: function(){
-            this.definitionEnabled(true)
-        },
-        hideDefinition: function(){
-            this.definitionEnabled(false)
-        }
-    }
-    ko.applyBindings(myViewModel);
+    
 })

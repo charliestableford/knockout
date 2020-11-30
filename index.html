@@ -12,13 +12,59 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="courses">
+            <h3>Course Registration</h3>
+            <ul>
+                <li>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" 
+					placeholder="First name"
+					data-bind="value: firstName"
+                         />
+                </li>
+                <li>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" 
+					placeholder="Last name"/>
+                </li>
+                <li>
+                    <label for="search">Course</label>
+                    <input type="search" id="search" name="search" />
+                </li>
+                <li>
+                    <label for="credithours">Credit Hours</label>
+                    <input id="credithours" name="credithours" 
+					type="number" min="1" max="6" 
+                    value="3" />
+                </li>
+                <li>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="Email" 
+					placeholder="myname@college.edu" />
+                </li>
+                <li>
+                    <label for="tel">Phone</label>
+                    <input type="tel" id="tel" name="tel" pattern="\d{10}" 
+                    placeholder="1234567890" />
+                </li>
+                <li>
+                    <input type="checkbox" name="Accept" 
+						data-bind="checked: acceptedConditions" /> 
+                    <span data-bind="text: firstName"></span> accepts the terms and conditions
+                </li>
 
-    <div data-bind="event: {mouseover: showDefinition, mouseout: hideDefinition}">
+                <li>
+                    <button type="submit" data-bind="enable: acceptedConditions">Submit</button>
+                </li>
+            </ul>
+        </div>
+
+    <!-- <div data-bind="event: {mouseover: showDefinition, mouseout: hideDefinition}">
         What is Knockout?
     </div>
     <div id="definition" data-bind="visible: definitionEnabled">
         This is a definition
-    </div>
+    </div> -->
 
     <!-- <div id="main" data-bind="visible: counter() < 10">
         <span data-bind="text: counter"></span>
