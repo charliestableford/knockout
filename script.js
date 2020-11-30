@@ -187,13 +187,26 @@ console.log("in");
 //     })
 // })
 
+// $(function(){
+//     var viewModel = {
+//         counter: ko.observable(0),
+//         incrementCounter: function(){
+//             var previousCounter = this.counter()
+//             this.counter(previousCounter+1);
+//         }
+//     }
+//     ko.applyBindings(viewModel);
+// })
+
 $(function(){
-    var viewModel = {
-        counter: ko.observable(0),
-        incrementCounter: function(){
-            var previousCounter = this.counter()
-            this.counter(previousCounter+1);
+    var myViewModel = {
+        definitionEnabled: ko.observable(false),
+        showDefinition: function(){
+            this.definitionEnabled(true)
+        },
+        hideDefinition: function(){
+            this.definitionEnabled(false)
         }
     }
-    ko.applyBindings(viewModel);
+    ko.applyBindings(myViewModel);
 })
